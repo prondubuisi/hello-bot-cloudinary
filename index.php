@@ -37,7 +37,7 @@ if($receivedMessage.$attachmentType === "image") {
    $imageUploadURL =$image_properties['secure_url'];
    $sendMessage->text($imageUploadURL);
 			   		 
-}else() {   
+}else{   
      $sendMessage->text("I was born to handle images, please send me one. ):");
     
 }
