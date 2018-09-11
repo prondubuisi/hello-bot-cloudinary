@@ -33,9 +33,9 @@ if(!empty($receivedMessage->textMessage)) {
 if($receivedMessage.$attachmentType === "image") {
 		
 	
-   $imageProperties = \Cloudinary\Uploader::upload($message_image,array("resource_type" => "image"));
-   $imageURL =$image_properties['secure_url'];
-   $sendMessage->text($imageURL);
+   $imageProperties = \Cloudinary\Uploader::upload($receivedMessage.$attachmentURL,array("resource_type" => "image"));
+   $imageUploadURL =$image_properties['secure_url'];
+   $sendMessage->text($imageUploadURL);
 			   		 
 }else() {   
      $sendMessage->text("I was born to handle images, please send me one. ):");
