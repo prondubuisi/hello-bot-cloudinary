@@ -30,10 +30,10 @@ if(!empty($receivedMessage->textMessage)) {
     
 }
  
-if($receivedMessage->$attachmentType === "image") {
+if($receivedMessage->attachmentType === "image") {
 		
 	
-   $imageProperties = \Cloudinary\Uploader::upload($receivedMessage.$attachmentURL,array("resource_type" => "image"));
+   $imageProperties = \Cloudinary\Uploader::upload($receivedMessage->attachmentURL,array("resource_type" => "image"));
    $imageUploadURL =$image_properties['secure_url'];
    $sendMessage->text($imageUploadURL);
 			   		 
