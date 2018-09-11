@@ -3,15 +3,15 @@ require 'vendor/autoload.php';
 use  App\VerifyBot;
 use App\ReceivedMessage;
 use App\SendMessage;
-use App\cloudinary\Cloudinary;
-use App\cloudinary\Uploader;
-use App\cloudinary\Api;
 
+require 'cloudinary/Cloudinary.php';
+require 'cloudinary/Uploader.php';
+require 'cloudinary/Api.php';
 
 
 
 $verifyBot = new VerifyBot();
-Cloudinary::config(array( 
+\Cloudinary::config(array( 
   "cloud_name" => "ndubuisi", 
   "api_key" => "322598253189364", 
   "api_secret" => "QI7-5lFL51RcLSTk3NlFeLcSzo8" 
